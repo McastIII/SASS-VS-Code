@@ -1,0 +1,221 @@
+.header {
+    background: $clr-dark;
+    position: relative;
+
+    &__wrapper {
+
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .branding {
+            margin: 2rem 0;
+
+            h3 {
+                display: flex;
+                align-items: center;
+                font-weight: lighter;
+                color: $clr-light;
+            }
+
+            img {
+                width: 3rem;
+                margin-right: 2rem;
+            }
+        }
+
+
+        &__desktop {
+            display: none;
+        }
+
+        .toggle__menu {
+
+            padding: 1rem;
+
+            span {
+                width: 3rem;
+                height: .2rem;
+                background-color: $clr-light;
+                display: block;
+                border-radius: 5rem;
+
+                &:nth-child(2) {
+                    margin: .3rem 0;
+                }
+
+            }
+
+            &:hover {
+                background-color: $clr-blue;
+            }
+
+            &.open {
+                span {
+                    &:first-child {
+                        transform: translate(0, 8px) rotate(225deg);
+                        transition: .5s ease;
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                        transition: .5s ease;
+                    }
+
+                    &:last-child {
+                        transform: translate(0, -3px) rotate(-225deg);
+                        transition: .5s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    &__mobile {
+
+        font-family: "Segoe UI", sans-serif;
+        position: absolute;
+        top: 10rem;
+        left: 0;
+        background: $clr-black;
+        max-height: 0rem;
+        width: 100%;
+        transition: .5s ease;
+        overflow: hidden;
+
+        &.open {
+            // top: 10rem;
+            max-height: 36rem;
+            transition: .5s ease;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+        ul {
+            margin: 0 2rem;
+
+            li {
+                margin: 2rem 0;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
+
+    }
+
+    .search__download {
+
+        form {
+            padding-left: 1rem;
+            
+            background: rgba(255, 255, 255, .18);
+
+            i{
+                color:  $clr-light;
+            }
+
+            input{
+                
+                border: none;
+            }
+
+            &:hover {
+
+                background: rgba(255, 255, 255, .2);
+            }
+        }
+
+        .btn.download {
+            display: flex;
+            align-items: center;
+            background: $clr-blue;
+            padding: 1rem;
+            color: #ffffff;
+            border: 1px solid $clr-blue;
+            height: 5.5rem;
+            text-align: center;
+            font-weight: 600;
+
+
+            img {
+                width: 3rem;
+                height: 2rem;
+            }
+
+            &:hover {
+                background: #005ba4;
+            }
+
+        }
+
+    }
+
+    &__desktop {
+        display: none;
+    }
+
+    @include mediaQuery($break-lg) {
+
+        .container{
+            padding: 0;
+        }
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        &__mobile {
+            display: none;
+        }
+
+        &__desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 14rem;
+
+            ul {
+                li {
+                    display: unset;
+                    margin-right: 2rem;
+
+                    a {
+                        color: $clr-l-gray;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .search__download {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            form {
+                position: relative;
+                display: unset;
+
+                input {
+                    background: transparent;
+                    font-size: 1.5rem;
+                    height: 5.5rem;
+                }
+            }
+        }
+
+        .toggle__menu {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.banner{
+    font-family: "Segoe UI",sans-serif;
+    background: $clr-dark;
+    height: 100vh;
+
+    &__version{
+        background: $clr-black;
+        padding: 2rem;
+        text-align: center;
+        justify-content: center;
+        p{
+            color: $clr-l-gray;
+        }
+    
+
+
+        span{
+            
+            color: $clr-blue;
+
+            a{
+                color: $clr-blue;
+                text-decoration: underline;
+                &:hover{
+                    text-decoration:unset;
+                }
+        }
+        }
+    }
+
+    &__content{
+        text-align: center;
+        margin: 1.5rem 0;
+        color: $clr-light;
+        h1{
+            font-size: 4rem;
+            font-weight: lighter;
+
+            span{
+            font-weight: bold;
+            }
+
+        }
+        p{
+            margin: 1.5rem 0;
+            color: $clr-l-gray;
+            font-weight: lighter;
+        }
+    }
+
+    &__button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:.2rem;
+        
+        .btn.download{
+            display: block;
+            width: 25rem;
+            flex-wrap: wrap;
+            background:$clr-blue;
+            padding: 1.2rem;
+            color: #ffffff;
+            border: 1px solid $clr-blue;
+            height: 5.5rem;
+            text-align: center;
+            font-weight: 600;
+
+            &:hover{
+                background: #005ba4;
+            }
+
+            span{
+                display: block;
+                text-align: center;
+                font-size: 1.1rem;
+                font-weight: lighter;
+                margin: 0 auto;
+            }
+        }
+
+        .btn.icon{
+            align-items: center;
+            background:$clr-blue;
+            padding: 1.5rem;
+            color: #ffffff;
+            border: 1px solid $clr-blue;
+            height: 5.5rem;
+            text-align: center;
+            font-weight: 600;
+
+            &:hover{
+                background: #005ba4;
+            }
+
+        }
+    }
+
+    &__editions{
+
+        text-align: center;
+        background: $clr-black;
+        width: 30rem;
+        margin: 0 auto;
+        height: 3.5rem;
+        border-radius: 2rem;
+        p{
+            padding: 1rem;
+            font-size: 1.2rem;
+            color: $clr-l-gray;
+        }
+        a{
+            font-size: 1.2rem;
+            color: $clr-blue;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__agreement{
+        text-align: center;
+        max-width: 20rem;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 2rem 0;
+        p{
+            font-size: 1.2rem;
+            color: $clr-l-gray;
+            font-weight: lighter;
+            a{
+                font-size: 1.2rem;
+                color: $clr-blue;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__image{
+        img{
+            width: 45rem;
+            height: 31rem;
+        }
+    }
+
+    @include mediaQuery($break-lg){
+
+    &__version{
+        padding: 1rem 0;
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: start;
+    }
+
+    &__content{
+        margin-top: 3rem;
+        margin-right: 4rem;
+
+        h1{
+            font-size: 5rem;
+
+            span{
+                
+                font-weight: bolder;
+            }
+        }
+
+      
+    }
+        &__image{
+            img{
+                
+            height: 60rem;
+            width: 80rem;
+            }
+        }
+    }
+}

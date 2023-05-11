@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(240, 6.38%, 18.43%);
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+
+.header {
+  background: hsl(240, 6.38%, 18.43%);
+  position: relative;
+}
+.header__wrapper {
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__wrapper .branding {
+  margin: 2rem 0;
+}
+.header__wrapper .branding h3 {
+  display: flex;
+  align-items: center;
+  font-weight: lighter;
+  color: hsl(0, 0%, 100%);
+}
+.header__wrapper .branding img {
+  width: 3rem;
+  margin-right: 2rem;
+}
+.header__wrapper__desktop {
+  display: none;
+}
+.header__wrapper .toggle__menu {
+  padding: 1rem;
+}
+.header__wrapper .toggle__menu span {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: hsl(0, 0%, 100%);
+  display: block;
+  border-radius: 5rem;
+}
+.header__wrapper .toggle__menu span:nth-child(2) {
+  margin: 0.3rem 0;
+}
+.header__wrapper .toggle__menu:hover {
+  background-color: hsl(206.74, 100%, 36.08%);
+}
+.header__wrapper .toggle__menu.open span:first-child {
+  transform: translate(0, 8px) rotate(225deg);
+  transition: 0.5s ease;
+}
+.header__wrapper .toggle__menu.open span:nth-child(2) {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.header__wrapper .toggle__menu.open span:last-child {
+  transform: translate(0, -3px) rotate(-225deg);
+  transition: 0.5s ease;
+}
+.header__mobile {
+  font-family: "Segoe UI", sans-serif;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  background: hsl(240, 7.5%, 15.69%);
+  max-height: 0rem;
+  width: 100%;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+.header__mobile.open {
+  max-height: 36rem;
+  transition: 0.5s ease;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.header__mobile ul {
+  margin: 0 2rem;
+}
+.header__mobile ul li {
+  margin: 2rem 0;
+}
+.header__mobile ul li a {
+  color: white;
+}
+.header .search__download form {
+  padding-left: 1rem;
+  background: rgba(255, 255, 255, 0.18);
+}
+.header .search__download form i {
+  color: hsl(0, 0%, 100%);
+}
+.header .search__download form input {
+  border: none;
+}
+.header .search__download form:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.header .search__download .btn.download {
+  display: flex;
+  align-items: center;
+  background: hsl(206.74, 100%, 36.08%);
+  padding: 1rem;
+  color: #ffffff;
+  border: 1px solid hsl(206.74, 100%, 36.08%);
+  height: 5.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+.header .search__download .btn.download img {
+  width: 3rem;
+  height: 2rem;
+}
+.header .search__download .btn.download:hover {
+  background: #005ba4;
+}
+.header__desktop {
+  display: none;
+}
+@media screen and (min-width: 1080px) {
+  .header .container {
+    padding: 0;
+  }
+  .header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .header__mobile {
+    display: none;
+  }
+  .header__desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14rem;
+  }
+  .header__desktop ul li {
+    display: unset;
+    margin-right: 2rem;
+  }
+  .header__desktop ul li a {
+    color: hsl(0, 0%, 80%);
+  }
+  .header__desktop ul li a:hover {
+    color: #fff;
+  }
+  .header .search__download {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .header .search__download form {
+    position: relative;
+    display: unset;
+  }
+  .header .search__download form input {
+    background: transparent;
+    font-size: 1.5rem;
+    height: 5.5rem;
+  }
+  .header .toggle__menu {
+    display: none;
+  }
+}
+
+.banner {
+  font-family: "Segoe UI", sans-serif;
+  background: hsl(240, 6.38%, 18.43%);
+  height: 100vh;
+}
+.banner__version {
+  background: hsl(240, 7.5%, 15.69%);
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+.banner__version p {
+  color: hsl(0, 0%, 80%);
+}
+.banner__version span {
+  color: hsl(206.74, 100%, 36.08%);
+}
+.banner__version span a {
+  color: hsl(206.74, 100%, 36.08%);
+  text-decoration: underline;
+}
+.banner__version span a:hover {
+  text-decoration: unset;
+}
+.banner__content {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: hsl(0, 0%, 100%);
+}
+.banner__content h1 {
+  font-size: 4rem;
+  font-weight: lighter;
+}
+.banner__content h1 span {
+  font-weight: bold;
+}
+.banner__content p {
+  margin: 1.5rem 0;
+  color: hsl(0, 0%, 80%);
+  font-weight: lighter;
+}
+.banner__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+.banner__button .btn.download {
+  display: block;
+  width: 25rem;
+  flex-wrap: wrap;
+  background: hsl(206.74, 100%, 36.08%);
+  padding: 1.2rem;
+  color: #ffffff;
+  border: 1px solid hsl(206.74, 100%, 36.08%);
+  height: 5.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+.banner__button .btn.download:hover {
+  background: #005ba4;
+}
+.banner__button .btn.download span {
+  display: block;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  margin: 0 auto;
+}
+.banner__button .btn.icon {
+  align-items: center;
+  background: hsl(206.74, 100%, 36.08%);
+  padding: 1.5rem;
+  color: #ffffff;
+  border: 1px solid hsl(206.74, 100%, 36.08%);
+  height: 5.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+.banner__button .btn.icon:hover {
+  background: #005ba4;
+}
+.banner__editions {
+  text-align: center;
+  background: hsl(240, 7.5%, 15.69%);
+  width: 30rem;
+  margin: 0 auto;
+  height: 3.5rem;
+  border-radius: 2rem;
+}
+.banner__editions p {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 80%);
+}
+.banner__editions a {
+  font-size: 1.2rem;
+  color: hsl(206.74, 100%, 36.08%);
+}
+.banner__editions a:hover {
+  text-decoration: underline;
+}
+.banner__agreement {
+  text-align: center;
+  max-width: 20rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.banner__agreement p {
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 80%);
+  font-weight: lighter;
+}
+.banner__agreement p a {
+  font-size: 1.2rem;
+  color: hsl(206.74, 100%, 36.08%);
+}
+.banner__agreement p a:hover {
+  text-decoration: underline;
+}
+.banner__image img {
+  width: 45rem;
+  height: 31rem;
+}
+@media screen and (min-width: 1080px) {
+  .banner__version {
+    padding: 1rem 0;
+  }
+  .banner__wrapper {
+    display: flex;
+    align-items: start;
+  }
+  .banner__content {
+    margin-top: 3rem;
+    margin-right: 4rem;
+  }
+  .banner__content h1 {
+    font-size: 5rem;
+  }
+  .banner__content h1 span {
+    font-weight: bolder;
+  }
+  .banner__image img {
+    height: 60rem;
+    width: 80rem;
+  }
+}/*# sourceMappingURL=main.css.map */
