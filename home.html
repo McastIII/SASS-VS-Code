@@ -8,6 +8,7 @@
     <title>Visual Studio Code</title>
     <link rel="stylesheet" href="./dist/scss/main.css">
     <script src="https://kit.fontawesome.com/84f56e6e16.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
 
 <body>
@@ -51,8 +52,7 @@
 
                         <form action="">
                             <i class="fa-solid fa-magnifying-glass fa-rotate-90"></i>
-                            <input type="text" id="search" name="search" placeholder="Search Docs"
-                            >
+                            <input type="text" id="search" name="search" placeholder="Search Docs">
                         </form>
                         <a href="" class="btn download"><img src="./dist/img/download icon.svg" alt="">Download</a>
                     </div>
@@ -68,7 +68,8 @@
 
     <section class="banner">
         <div class="banner__version">
-            <p><span><a href="">Version 1.78</a></span> is now available! Read about the new features and fixes from April.</p>
+            <p><span><a href="">Version 1.78</a></span> is now available! Read about the new features and fixes from
+                April.</p>
         </div>
         <div class="container">
             <div class="banner__wrapper">
@@ -96,7 +97,133 @@
         </div>
     </section>
 
+    <section class="testimonies">
+        <div class="container">
+        <div class="testimonies__wrapper">
+            <div class="kamote">
+                <div class="testimonies__item">
+                    <img src="./dist/img/Una.jpg" alt="">
+                    <div class="testimonies__text">
+                        <h4><span>Una Kravets</span><i class="fa-brands fa-twitter"></i></h4>
+                        <h6>@Una</h6>
+                        <p>VS<span><a href=""> @code</a></span> does so many things right. I’m constantly impressed by the UX, and customizing workspace / user preferences is no exception. 🙌🏼💯 It just keeps getting better ❤️</p>
+                    </div>
+                </div>
+                <div class="testimonies__item">
+                    <img src="./dist/img/jadbox.jpg" alt="">
+                    <div class="testimonies__text">
+                        <h4><span>Jonathan Dunlap</span><i class="fa-brands fa-twitter"></i></h4>
+                        <h6>@jadbox</h6>
+                        <p>VS Code will have deep remote development. You can connect to a container running a different OS and use any VS Code plugins, linting, debugging for that environment. 🔥🔥🔥</p>
+                    </div>
+                </div>
+                <div class="testimonies__item">
+                    <img src="./dist/img/PKodmad.jpg" alt="">
+                    <div class="testimonies__text">
+                        <h4><span>Pavithra Kodmad</span><i class="fa-brands fa-twitter"></i></h4>
+                        <h6>@PKodmad</h6>
+                        <p>VS Code is my most used and favorite editor. I love being able to customize the editor - changing the layout, the icons, fonts and color scheme is so easy!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kamote">
+                <div class="testimonies__item">
+                    <img src="./dist/img/MrDarrenV.jpg" alt="">
+                    <div class="testimonies__text">
+                        <h4><span>Darren</span><i class="fa-brands fa-twitter"></i></h4>
+                        <h6>@MrDarrenV</h6>
+                        <p>Just as I thought<span><a href=""> @code</a></span> couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
+                    </div>
+                </div>
+                <div class="testimonies__item">
+                    <img src="./dist/img/cassidoo.jpg" alt="">
+                    <div class="testimonies__text">
+                        <h4><span>Cassidy Williams</span><i class="fa-brands fa-twitter"></i></h4>
+                        <h6>@cassidoo</h6>
+                        <p>I was a vim fan, but then discovered VS Code's Vim plugin, which lets me add in my vim keybindings. I can maintain my coding style without having to compromise on speed.</p>
+                    </div>
+                </div>
+                <div class="testimonies__item">
+                    <img src="./dist/img/lauragift21.jpg" alt="">
+                    <div class="testimonies__text">
+                        <h4><span>Gift Egwuenu</span><i class="fa-brands fa-twitter"></i></h4>
+                        <h6>@lauragift21</h6>
+                        <p>I love<span><a href=""> @code</a></span> The built-in markdown previewer is awesome and the plugin system allows me to use GitLens, which makes my workflow so much easier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="features">
+        <div class="features__wrapper">
+            <div class="features__item">
+                <div class="content">
+                    <img src="./dist/img/home-intellisense.svg" alt="">
+                    <div class="content__text">
+                        <h3>Meet Intellisense.</h3>
+                        <p>Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart completions based on variable types, function definitions, and imported modules.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="features__item">
+                <div class="content">
+                    <img src="./dist/img/home-debug.svg" alt="">
+                    <div class="content__text">
+                        <h3>Print statement debugging is a thing of the past.</h3>
+                        <p>Debug code right from the editor. Launch or attach to your running apps and debug with break points, call stacks, and an interactive console.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="features__item">
+                <div class="content">
+                    <img src="./dist/img/home-git.svg" alt="">
+                    <div class="content__text">
+                        <h3>Git commands built-in.</h3>
+                        <p>Working with Git and other SCM providers has never been easier. Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted SCM service.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="features__item">
+                <div class="content">
+                    <img src="./dist/img/Hundreds-of-Extensions.png" alt="">
+                    <div class="content__text">
+                        <h3>Extensible and customizable.</h3>
+                        <p>Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services. Extensions run in separate processes, ensuring they won't slow down your editor.<span><a href=""> Learn more about extensions.</a></span></p> 
+                    </div>
+                </div>
+            </div>
+            <div class="features__item">
+                <div class="content">
+                    <img src="./dist/img/home-azure.svg" alt="">
+                    <div class="content__text">
+                        <h3>Deploy with confidence and ease</h3>
+                        <p>With <span><a href="">Microsoft Azure </a></span>you can deploy and host your React, Angular, Vue, Node, Python (and more!) sites, store and query relational and document based data, and scale with serverless computing, all with ease, <span><a href="">all from within VS Code.</a></span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <script src="./dist/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script type="module">
+        // import {tns} from './src/tiny-slider.js';
+
+        var slider = tns({
+        container: '.testimonies__wrapper',
+        items: 1,
+        slideBy: 'page',
+        autoplay: false,
+        controlsText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
+        // responsive:{
+        //     1080:{
+
+        //     }
+        // }
+        });
+        </script>
 </body>
 
 </html>

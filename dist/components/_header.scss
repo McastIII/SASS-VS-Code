@@ -2,8 +2,13 @@
     background: $clr-dark;
     position: relative;
 
+    .container{
+        padding:0;
+    }
+
     &__wrapper {
 
+        margin: 0 2rem;
         font-family: "Segoe UI", sans-serif;
         display: flex;
         align-items: center;
@@ -32,17 +37,18 @@
 
         .toggle__menu {
 
-            padding: 1rem;
+            padding: 1.2rem;
 
             span {
-                width: 3rem;
+                width: 2.3rem;
                 height: .2rem;
                 background-color: $clr-light;
                 display: block;
                 border-radius: 5rem;
 
+
                 &:nth-child(2) {
-                    margin: .3rem 0;
+                    margin: .4rem 0;
                 }
 
             }
@@ -55,17 +61,17 @@
                 span {
                     &:first-child {
                         transform: translate(0, 8px) rotate(225deg);
-                        transition: .5s ease;
+
                     }
 
                     &:nth-child(2) {
                         opacity: 0;
-                        transition: .5s ease;
+
                     }
 
                     &:last-child {
-                        transform: translate(0, -3px) rotate(-225deg);
-                        transition: .5s ease;
+                        transform: translate(0, -4px) rotate(-225deg);
+
                     }
                 }
             }
@@ -88,7 +94,6 @@
             // top: 10rem;
             max-height: 36rem;
             transition: .5s ease;
-            overflow: hidden;
             overflow-y: scroll;
         }
 
@@ -110,6 +115,7 @@
     .search__download {
 
         form {
+            display:none;
             padding-left: 1rem;
             
             background: rgba(255, 255, 255, .18);
@@ -121,6 +127,7 @@
             input{
                 
                 border: none;
+
             }
 
             &:hover {
@@ -160,10 +167,12 @@
 
     @include mediaQuery($break-lg) {
 
+
         .container{
             padding: 0;
         }
         &__wrapper {
+            margin: 0;
             display: flex;
             align-items: center;
             justify-content: space-between;

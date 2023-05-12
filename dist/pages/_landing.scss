@@ -1,11 +1,11 @@
 .banner{
     font-family: "Segoe UI",sans-serif;
     background: $clr-dark;
-    height: 100vh;
-
+    height: 76vh;
+    padding: unset;
     &__version{
         background: $clr-black;
-        padding: 2rem;
+        padding: 1rem 4rem;
         text-align: center;
         justify-content: center;
         p{
@@ -16,10 +16,10 @@
 
         span{
             
-            color: $clr-blue;
+            color: $clr-l-blue;
 
             a{
-                color: $clr-blue;
+                color: $clr-l-blue;
                 text-decoration: underline;
                 &:hover{
                     text-decoration:unset;
@@ -30,14 +30,15 @@
 
     &__content{
         text-align: center;
-        margin: 1.5rem 0;
+        // margin: 1.5rem 0;
         color: $clr-light;
         h1{
             font-size: 4rem;
             font-weight: lighter;
+            line-height: 4.5rem;
 
             span{
-            font-weight: bold;
+            font-weight: bolder;
             }
 
         }
@@ -111,7 +112,7 @@
         }
         a{
             font-size: 1.2rem;
-            color: $clr-blue;
+            color: $clr-l-blue;
 
             &:hover{
                 text-decoration: underline;
@@ -124,14 +125,13 @@
         max-width: 20rem;
         flex-wrap: wrap;
         margin: 0 auto;
-        padding: 2rem 0;
         p{
             font-size: 1.2rem;
             color: $clr-l-gray;
             font-weight: lighter;
             a{
                 font-size: 1.2rem;
-                color: $clr-blue;
+                color: $clr-l-blue;
 
                 &:hover{
                     text-decoration: underline;
@@ -144,6 +144,7 @@
         img{
             width: 45rem;
             height: 31rem;
+            padding-bottom: 1rem;
         }
     }
 
@@ -171,13 +172,147 @@
             }
         }
 
-      
+
     }
         &__image{
             img{
                 
             height: 60rem;
             width: 80rem;
+            }
+        }
+    }
+}
+
+.testimonies{
+    position:relative;
+    &__wrapper{
+        font-family:'Segoe UI', sans-serif;
+        display:block;
+    }
+
+    &__item{
+        display:flex;
+        margin: 3rem 4rem;
+
+        img{
+            @include imgFit(60px,60px);
+            border-radius: 6rem;
+            margin-right: 1rem;
+
+            &:hover{
+                cursor: pointer;
+            }
+         }
+         &:not(:first-child){
+            margin-top: 5rem;
+         }
+    }
+
+    &__text{
+
+        h4{
+            display: flex;
+            justify-content:space-between;
+            span{
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            
+            &:hover{
+            color: $clr-blue;
+            cursor: pointer;
+            }
+
+            
+            i{
+                color: $clr-l-gray;
+                font-size: 1.3rem;
+
+            }
+        }
+
+
+        h6{
+            font-weight: lighter;
+            color: $clr-gray;
+        }
+        p{
+            font-weight: lighter;
+            font-size: 1.5rem;
+
+            span{
+
+                a{
+                    font-size:1.5rem;
+                    font-weight:lighter;
+                    color:$clr-blue;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+    }
+    .tns-nav{
+        display:none;
+    }
+    .tns-controls{
+        position: absolute;
+        display:flex;
+        align-items: center;
+        justify-content:space-between;
+        width:92vw;
+        top:50%;
+        z-index: 999;
+        button{
+            background:none;
+            border:none;
+            font-size: 2rem;
+        }
+    }
+
+    @include mediaQuery(1024px){
+        
+        #tns1 > .tns-item{
+            display:inline-flex;
+            align-items: baseline;
+        }
+
+        &__item{
+            margin-top: 0rem;
+        }
+
+        .tns-controls{
+        width: 60vw;
+        top: 50%;
+            }
+    }
+
+}
+
+.features{
+
+    &__wrapper{
+        margin: 0 2rem;
+        display: block;
+        font-family: "Segoe UI", sans-serif;
+        justify-content: center;
+        
+        .content{
+            img{
+                margin: 0 auto;
+            }
+        }
+        
+        .content__text{
+            h3{
+                font-weight: lighter;
+            }
+            p{
+                font-size: 1.3rem;
             }
         }
     }
